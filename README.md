@@ -1,8 +1,8 @@
-# Golang install for linux
+## Golang install for linux
 └─$ sudo apt install gccgo-go 
 └─$ sudo apt install golang-go
 
-# Golang run
+## Golang run
 └─$ go run main.go
 └─$ go build main.go
 └─$ ./main
