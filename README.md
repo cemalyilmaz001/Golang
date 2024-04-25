@@ -1,8 +1,12 @@
-## Golang install for linux
-└─$ sudo apt install gccgo-go 
-└─$ sudo apt install golang-go
+## Golang nedir ? 
+Go basit, güvenilir ve verimli yazılımlar tasarlamamızı sağlayan açık kaynak bir yazılım dilidir. <br>Google'daki bir takım ve birçok açık kaynak destekçisinin katılımıyla ortaya çıkmıştır.
 
-## Golang run
-└─$ go run main.go
-└─$ go build main.go
+
+## install for linux
+└─$ sudo apt install gccgo-go<br> 
+└─$ sudo apt install golang-go<br>
+
+## run
+└─$ go run main.go<br>
+└─$ go build main.go<br>
 └─$ ./main
