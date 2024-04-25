@@ -1,2 +1,2 @@
 # golang
-go programlama dili 
+go programlama dili.
