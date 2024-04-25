@@ -1,0 +1,2 @@
+# golang
+go programlama dili 
