@@ -10,7 +10,16 @@ import (
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	// Gelen isteğin IP adresini al
-	ip := strings.Split(r.RemoteAddr, ":")[0]
+	ipNumber := strings.Split(r.RemoteAddr, ":")
+
+	// Port bilgisi
+    var port string
+    if len(ipNumber) > 1 {
+        port = ipNumber[1]
+    } else {
+        port = "Belirtilmedi"
+    }
+
 
 	// Kullanılan işletim sistemini al
 	userAgent := r.UserAgent()
@@ -26,7 +35,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// İstek bilgilerini dosyaya yaz
-	writeToLog(fmt.Sprintf("IP: %s, İşletim Sistemi: %s", ip, os))
+	writeToLog(fmt.Sprintf("IP: %s,Port: %s,Sistem: %s", ipNumber[0], port, os))
 
 	// HTML içeriğini oluştur ve gönder
 	fmt.Fprintf(w, `
@@ -40,13 +49,14 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 		</head>
 		<body>
 			<div class="container">
-				<h1>Merhaba, Dünya!</h1>
-				<p>IP Adresiniz: %s</p>
-				<p>Kullanılan İşletim Sistemi: %s</p>
+				<h1>Golang, for hackers!</h1>
+				<p>IP Adresi: %s</p>
+				<p>İşletim Sistemi: %s</p>
+				<p>Port Numarası: %s</p>
 			</div>
 		</body>
 		</html>
-	`, ip, os)
+	`, ipNumber[0], os,port)
 }
 
 func stylesHandler(w http.ResponseWriter, r *http.Request) {
