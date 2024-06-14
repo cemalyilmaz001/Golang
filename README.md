@@ -5,8 +5,15 @@ Go basit, güvenilir ve verimli yazılımlar tasarlamamızı sağlayan açık ka
 ## install for linux
 └─$ sudo apt install gccgo-go<br> 
 └─$ sudo apt install golang-go<br>
+└─$ go get github.com/VirusTotal/vt-go<br>
+
 
 ## run
-└─$ go run main.go<br>
-└─$ go build main.go<br>
-└─$ ./main
+└─$ mkdir Demo<br>
+└─$ go mod init DemoXS<br>
+└─$ mkdir DemoXS<br>
+└─$ cd DemoXS<br>
+└─$ touch test.go<br>
+└─$ go run test.go<br>
+└─$ go build test.go<br>
+└─$ ./test
