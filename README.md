@@ -5,7 +5,6 @@ Go basit, güvenilir ve verimli yazılımlar tasarlamamızı sağlayan açık ka
 ## install for linux
 └─$ sudo apt install gccgo-go<br> 
 └─$ sudo apt install golang-go<br>
-└─$ go get github.com/VirusTotal/vt-go<br>
 
 
 ## run
